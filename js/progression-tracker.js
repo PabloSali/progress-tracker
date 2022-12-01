@@ -1,4 +1,27 @@
 "use strict"
+    let overallScore = userCaliberScore();//Assign variable to a function that calculates gear score
+
+    function userCaliberScore(){
+
+    }
+
+    function renderDashBoard(){
+
+    }
+//---------- Function that calculates user's strength score ------------
+    function calcStrength(){
+        let degradeAttribute = 2
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25,7 +48,7 @@
     - Create Deterioration
         - Create variable that defines how fast a skill deteriorates
         - Assign value of degradation within the skills calculation function
-        - Research skills degredation
+        - Research skills degradation
 
     - Create Progression
         - Create skill breakdowns, so they can feed multiple skills
@@ -34,5 +57,8 @@
     - Create Parent Attributes that house skills
         -
 
+    - Create customization option
+        - Dark mode toggle
+        - Background selector
 ----------------------------------------------------------------- */
 
