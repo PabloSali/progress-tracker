@@ -1,20 +1,50 @@
 "use strict"
-    let overallScore = userCaliberScore();//Assign variable to a function that calculates gear score
+    let overallScore = overallCalc();//Assign variable to a function that calculates gear score
+    let physicalScore = physicalCalc();
+    let cognitiveScore = cognitiveCalc();
+    let emotionalScore = emotionalCalc();
+    let socialScore = socialCalc();
 
-    function userCaliberScore(){
+
+    function overallCalc(){
 
     }
 
-    function renderDashBoard(){
+    function physicalCalc(){
 
     }
-//---------- Function that calculates user's strength score ------------
-    function calcStrength(){
-        let degradeAttribute = 2
+
+    function cognitiveCalc(){
+
     }
 
+    function emotionalCalc(){
 
+    }
 
+    function socialCalc(){
+
+    }
+// Selectors and DOM manipulations
+    let homeButton = document.querySelector('#home-button');
+    homeButton.addEventListener('click', renderHome);
+
+// Function that renders page's cards
+    function renderHome(){
+        let overallScoreCard = document.querySelector('#overall-card');
+
+        let overallCardContents = '<div className="max-w-sm rounded overflow-hidden shadow-lg">';
+        overallCardContents += '<img class="w-full" src="/img/card-top.jpg" alt="">';
+        overallCardContents += '<div class="px-6 py-4">';
+        overallCardContents += '<div class="font-bold text-xl mb-2">Your Capability</div>';
+        overallCardContents += '<p class="text-gray-700 text-base" id="overall-score">';
+        overallCardContents += 'Your Score </p>';
+        overallCardContents += '</div>';
+        overallCardContents += '</div>';
+        overallCardContents += '</div>';
+
+        overallScoreCard.innerHTML = overallCardContents;
+        }
 
 
 
@@ -54,4 +84,3 @@
     - Dark mode toggle
     - Background selector
 ----------------------------------------------------------------- */
-
