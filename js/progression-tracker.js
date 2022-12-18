@@ -5,13 +5,16 @@
     let emotionalScore = emotionalCalc();
     let socialScore = socialCalc();
 
-
+// Score calculating functions
     function overallCalc(){
-
+        return physicalCalc + cognitiveCalc + emotionalCalc + socialCalc;
     }
 
     function physicalCalc(){
-
+        let muscularStrength;
+        let muscularEndurance;
+        let cardioStrength;
+        let cardioEndurance;
     }
 
     function cognitiveCalc(){
