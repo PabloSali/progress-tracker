@@ -4,6 +4,7 @@
     let cognitiveScore = cognitiveCalc();
     let emotionalScore = emotionalCalc();
     let socialScore = socialCalc();
+    let userWeight = 0;
 
 // Score calculating functions
     function overallCalc(){
@@ -11,7 +12,7 @@
     }
 
     function physicalCalc(){
-        let muscularStrength;
+        let muscularStrength = (oneRepMax / usreWeight);
         let muscularEndurance;
         let cardioStrength;
         let cardioEndurance;
