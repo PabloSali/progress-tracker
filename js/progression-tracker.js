@@ -10,13 +10,17 @@
     function overallCalc(){
         return physicalCalc + cognitiveCalc + emotionalCalc + socialCalc;
     }
-
+// Physical Score Code
     function physicalCalc(){
-        let muscularStrength = (oneRepMax / usreWeight);
+        let muscularStrength = (oneRepMax / userWeight);
         let muscularEndurance;
         let cardioStrength;
         let cardioEndurance;
     }
+
+    let oneRepMax = document.querySelector(#userOneRepMax);
+
+// Physical Score End
 
     function cognitiveCalc(){
 
