@@ -18,10 +18,7 @@
         let cardioEndurance;
     }
 
-    let oneRepMax = document.querySelector(#userOneRepMax);
-
 // Physical Score End
-
     function cognitiveCalc(){
 
     }
@@ -53,8 +50,6 @@
 
         overallScoreCard.innerHTML = overallCardContents;
         }
-
-
 
 /* -----------------------------------------------------------------
                        Operation Plan
