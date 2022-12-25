@@ -1,3 +1,9 @@
 #navbar-body{
     background-color: rgb(236, 69, 9) !important;
 }
+html{
+    background-color: grey;
+}
+.content-card{
+    background-color: lightgrey;
+}

@@ -37,6 +37,7 @@
 
     let userAttributes = document.querySelector('#userAttributes');
     userAttributes.addEventListener('click', renderAttributes);
+
 // Function that renders page's cards
     function renderHome(){
         let overallScoreCard = document.querySelector('#overall-card');
