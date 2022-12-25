@@ -19,21 +19,24 @@
     }
 
 // Physical Score End
+// Cognitive Score Code
     function cognitiveCalc(){
 
     }
-
+// Emotional Score Code
     function emotionalCalc(){
 
     }
-
+// Social Score Code
     function socialCalc(){
 
     }
 // Selectors and DOM manipulations
-    let homeButton = document.querySelector('#home-button');
+    let homeButton = document.querySelector('#user-home');
     homeButton.addEventListener('click', renderHome);
 
+    let userAttributes = document.querySelector('#userAttributes');
+    userAttributes.addEventListener('click', renderAttributes);
 // Function that renders page's cards
     function renderHome(){
         let overallScoreCard = document.querySelector('#overall-card');
@@ -49,7 +52,14 @@
         overallCardContents += '</div>';
 
         overallScoreCard.innerHTML = overallCardContents;
-        }
+
+        let pagetitle = document.querySelector('#page-title')
+        pagetitle.innerHTML = 'Welcome';
+    }
+
+    function renderAttributes(){
+
+    }
 
 /* -----------------------------------------------------------------
                        Operation Plan
