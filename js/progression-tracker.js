@@ -97,4 +97,7 @@
 - Create customization option
     - Dark mode toggle
     - Background selector
+
+- Create measures for muscular endurance
+
 ----------------------------------------------------------------- */
