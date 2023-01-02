@@ -42,18 +42,6 @@
     function renderHome(){
         let overallScoreCard = document.querySelector('#overall-card');
 
-        let overallCardContents = '<div className="max-w-sm rounded overflow-hidden shadow-lg">';
-        overallCardContents += '<img class="w-full" src="/img/card-top.jpg" alt="">';
-        overallCardContents += '<div class="px-6 py-4">';
-        overallCardContents += '<div class="font-bold text-xl mb-2">Your Capability</div>';
-        overallCardContents += '<p class="text-gray-700 text-base" id="overall-score">';
-        overallCardContents += 'Your Score </p>';
-        overallCardContents += '</div>';
-        overallCardContents += '</div>';
-        overallCardContents += '</div>';
-
-        overallScoreCard.innerHTML = overallCardContents;
-
         let pagetitle = document.querySelector('#page-title')
         pagetitle.innerHTML = 'Welcome';
     }
