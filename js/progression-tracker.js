@@ -1,54 +1,20 @@
 "use strict"
-    let overallScore = overallCalc();//Assign variable to a function that calculates gear score
-    let physicalScore = physicalCalc();
-    let cognitiveScore = cognitiveCalc();
-    let emotionalScore = emotionalCalc();
-    let socialScore = socialCalc();
-    let userWeight = 0;
+let dashboard = document.querySelector("#dashboard");
+dashboard.addEventListener('click', loadDashboard);
 
-// Score calculating functions
-    function overallCalc(){
-        return physicalCalc + cognitiveCalc + emotionalCalc + socialCalc;
-    }
-// Physical Score Code
-    function physicalCalc(){
-        let muscularStrength = (oneRepMax / userWeight);
-        let muscularEndurance;
-        let cardioStrength;
-        let cardioEndurance;
-    }
+function loadDashboard(){
+    makeCard();
+}
+function makeCard(){
+    let card = '<div class="max-w-sm rounded overflow-hidden shadow-lg content-card">\n';
+    card += '<div class="font-bold text-xl mb-2"></div>';
+    card += '<p class="text-gray-700 text-base">'
+    card += ''
+    card += '</p>'
+    card += '</div>'
 
-// Physical Score End
-// Cognitive Score Code
-    function cognitiveCalc(){
-
-    }
-// Emotional Score Code
-    function emotionalCalc(){
-
-    }
-// Social Score Code
-    function socialCalc(){
-
-    }
-// Selectors and DOM manipulations
-    let homeButton = document.querySelector('#user-home');
-    homeButton.addEventListener('click', renderHome);
-
-    let userAttributes = document.querySelector('#userAttributes');
-    userAttributes.addEventListener('click', renderAttributes);
-
-// Function that renders page's cards
-    function renderHome(){
-        let overallScoreCard = document.querySelector('#overall-card');
-
-        let pagetitle = document.querySelector('#page-title')
-        pagetitle.innerHTML = 'Welcome';
-    }
-
-    function renderAttributes(){
-
-    }
+    return card;
+}
 
 /* -----------------------------------------------------------------
                        Operation Plan
