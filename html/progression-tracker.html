@@ -6,6 +6,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Stylesheet link -->
     <link href="../css/progression-tracker.css" rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- NavBar Starts Here -->
@@ -42,27 +44,67 @@
     <!-- NavBar Ends Here -->
     <!-------------------------- Page Title ------------------------------->
     <h1 class="text-3xl font-bold underline" id="page-title">
-        Title of Page Here
+        Title
     </h1>
     <!------------------------ Overall Score Card ------------------------->
-    <div id="card-container">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg content-card">
-            <img class="w-full" src="/img/card-top.jpg" alt="">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2"></div>
-                <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-            </div>
-        </div>
+    <div class="shadow-lg rounded-lg overflow-hidden physicalStats w-1/2">
+        <div class="py-3 px-5 bg-gray-50 w-84 strengthStatTitle">Your Physical Score</div>
+        <canvas class="p-10" id="physicalRadar"></canvas>
     </div>
-<!-------------- Links ---------------->
+
+    <!-------------- Links ---------------->
     <!-- Progression Tracker javascript document -->
     <script src="../js/progression-tracker.js"></script>
+    <!-- Chart Radar Link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Tailwind Stats Chart JS Code -->
+    <script>
+        const physicalRadar = {
+            labels: [
+                "Muscular Strength",
+                "Muscular Endurance",
+                "Cardio Endurance",
+                "Mobility",
+                "Chronic Health",
+                "Provisional Health",
+
+            ],
+            datasets: [
+                {
+                    label: "Physical Strength",
+                    data: [65, 59, 90, 81, 56, 55],
+                    fill: true,
+                    backgroundColor: "rgba(133, 105, 241, 0.2)",
+                    borderColor: "rgb(133, 105, 241)",
+                    pointBackgroundColor: "rgb(133, 105, 241)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgb(133, 105, 241)",
+                },
+                {
+                    label: "My Second Dataset",
+                    data: [28, 48, 40, 19, 96, 27],
+                    fill: true,
+                    backgroundColor: "rgba(54, 162, 235, 0.2)",
+                    borderColor: "rgb(54, 162, 235)",
+                    pointBackgroundColor: "rgb(54, 162, 235)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgb(54, 162, 235)",
+                },
+            ],
+        };
+
+        const configRadarChart = {
+            type: "radar",
+            data: physicalRadar,
+            options: {},
+        };
+
+        let chartBar = new Chart(
+            document.getElementById("physicalRadar"),
+            configRadarChart
+        );
+    </script>
 </body>
 </html>

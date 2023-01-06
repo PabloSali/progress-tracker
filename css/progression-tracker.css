@@ -7,3 +7,13 @@ html{
 .content-card{
     background-color: lightgrey;
 }
+
+/*Tailwind CSS*/
+.physicalStats{
+
+}
+
+canvas{
+    width: 10em; !important;
+    height: 10em; !important;
+}

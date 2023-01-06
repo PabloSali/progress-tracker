@@ -16,6 +16,9 @@ function makeCard(){
     return card;
 }
 
+
+
+// -- Stats Chart End --
 /* -----------------------------------------------------------------
                        Operation Plan
 - Create a dashboard to display all important data
