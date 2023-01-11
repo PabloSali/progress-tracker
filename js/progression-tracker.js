@@ -1,19 +1,47 @@
 "use strict"
-let dashboard = document.querySelector("#dashboard");
+let dashboard = document.querySelector("#user-dashboard");
 dashboard.addEventListener('click', loadDashboard);
 
-function loadDashboard(){
-    makeCard();
-}
-function makeCard(){
-    let card = '<div class="max-w-sm rounded overflow-hidden shadow-lg content-card">\n';
-    card += '<div class="font-bold text-xl mb-2"></div>';
-    card += '<p class="text-gray-700 text-base">'
-    card += ''
-    card += '</p>'
-    card += '</div>'
+let attributes = document.querySelector("#user-attributes");
+attributes.addEventListener('click', loadAttributes);
 
-    return card;
+let skills = document.querySelector("#user-skills");
+skills.addEventListener('click', loadSkills);
+
+let tests = document.querySelector("#user-tests");
+tests.addEventListener('click', loadHowToTest);
+
+function loadDashboard(){
+    loadPageTitle("Dashboard");
+}
+function loadAttributes(){
+    loadPageTitle("Attributes");
+}
+function loadSkills(){
+    loadPageTitle("Skills");
+}
+function loadHowToTest(){
+    loadPageTitle("How To Test");
+}
+
+function loadPageTitle(pageTitle){
+    console.log("dashboard loaded")
+    if(pageTitle === "Dashboard") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Dashboard";
+    }
+    if(pageTitle === "Attributes") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Attributes";
+    }
+    if(pageTitle === "Skills") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Skills";
+    }
+    if(pageTitle === "How To Test") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "How To Test";
+    }
 }
 
 
