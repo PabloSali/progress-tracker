@@ -1,13 +1,11 @@
 "use strict"
+// Selectors for Nav Bar
 let dashboard = document.querySelector("#user-dashboard");
 dashboard.addEventListener('click', loadDashboard);
-
 let attributes = document.querySelector("#user-attributes");
 attributes.addEventListener('click', loadAttributes);
-
 let skills = document.querySelector("#user-skills");
 skills.addEventListener('click', loadSkills);
-
 let tests = document.querySelector("#user-tests");
 tests.addEventListener('click', loadHowToTest);
 

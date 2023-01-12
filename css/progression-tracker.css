@@ -17,3 +17,19 @@ canvas{
     width: 10em; !important;
     height: 10em; !important;
 }
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #1a1a1a;
+}
+
+h1 {
+    text-align: center;
+    color: #d4d4d4;
+}
+#red-ring{
+    margin-right: 3rem;
+}
+#blue-ring{
+    margin-right: 3rem;
+
+}
