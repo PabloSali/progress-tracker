@@ -1,67 +1,50 @@
 "use strict"
-    let overallScore = overallCalc();//Assign variable to a function that calculates gear score
-    let physicalScore = physicalCalc();
-    let cognitiveScore = cognitiveCalc();
-    let emotionalScore = emotionalCalc();
-    let socialScore = socialCalc();
-    let userWeight = 0;
+// Selectors for Nav Bar
+let dashboard = document.querySelector("#user-dashboard");
+dashboard.addEventListener('click', loadDashboard);
+let attributes = document.querySelector("#user-attributes");
+attributes.addEventListener('click', loadAttributes);
+let skills = document.querySelector("#user-skills");
+skills.addEventListener('click', loadSkills);
+let tests = document.querySelector("#user-tests");
+tests.addEventListener('click', loadHowToTest);
 
-// Score calculating functions
-    function overallCalc(){
-        return physicalCalc + cognitiveCalc + emotionalCalc + socialCalc;
+function loadDashboard(){
+    loadPageTitle("Dashboard");
+}
+function loadAttributes(){
+    loadPageTitle("Attributes");
+}
+function loadSkills(){
+    loadPageTitle("Skills");
+}
+function loadHowToTest(){
+    loadPageTitle("How To Test");
+}
+
+function loadPageTitle(pageTitle){
+    if(pageTitle === "Dashboard") {
+        console.log("dashboard loaded")
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Dashboard";
     }
-// Physical Score Code
-    function physicalCalc(){
-        let muscularStrength = (oneRepMax / userWeight);
-        let muscularEndurance;
-        let cardioStrength;
-        let cardioEndurance;
+    if(pageTitle === "Attributes") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Attributes";
     }
-
-// Physical Score End
-// Cognitive Score Code
-    function cognitiveCalc(){
-
+    if(pageTitle === "Skills") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "Skills";
     }
-// Emotional Score Code
-    function emotionalCalc(){
-
+    if(pageTitle === "How To Test") {
+        let titleCard = document.querySelector("#page-title");
+        titleCard.innerHTML = "How To Test";
     }
-// Social Score Code
-    function socialCalc(){
+}
 
-    }
-// Selectors and DOM manipulations
-    let homeButton = document.querySelector('#user-home');
-    homeButton.addEventListener('click', renderHome);
 
-    let userAttributes = document.querySelector('#userAttributes');
-    userAttributes.addEventListener('click', renderAttributes);
 
-// Function that renders page's cards
-    function renderHome(){
-        let overallScoreCard = document.querySelector('#overall-card');
-
-        let overallCardContents = '<div className="max-w-sm rounded overflow-hidden shadow-lg">';
-        overallCardContents += '<img class="w-full" src="/img/card-top.jpg" alt="">';
-        overallCardContents += '<div class="px-6 py-4">';
-        overallCardContents += '<div class="font-bold text-xl mb-2">Your Capability</div>';
-        overallCardContents += '<p class="text-gray-700 text-base" id="overall-score">';
-        overallCardContents += 'Your Score </p>';
-        overallCardContents += '</div>';
-        overallCardContents += '</div>';
-        overallCardContents += '</div>';
-
-        overallScoreCard.innerHTML = overallCardContents;
-
-        let pagetitle = document.querySelector('#page-title')
-        pagetitle.innerHTML = 'Welcome';
-    }
-
-    function renderAttributes(){
-
-    }
-
+// -- Stats Chart End --
 /* -----------------------------------------------------------------
                        Operation Plan
 - Create a dashboard to display all important data
