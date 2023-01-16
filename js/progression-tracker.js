@@ -23,8 +23,8 @@ function loadHowToTest(){
 }
 
 function loadPageTitle(pageTitle){
-    console.log("dashboard loaded")
     if(pageTitle === "Dashboard") {
+        console.log("dashboard loaded")
         let titleCard = document.querySelector("#page-title");
         titleCard.innerHTML = "Dashboard";
     }
