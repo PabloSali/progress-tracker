@@ -3,48 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <title>Wherewithal</title>
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
-    </style>
     <!-- Stylesheet link -->
     <link href="../css/progression-tracker.css" rel="stylesheet">
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- Card CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--  Nav Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar-body">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Wherewithal</a>
+            <a class="navbar-brand font-black" href="#">Wherewithal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+                        <a class="nav-link d-none" aria-current="page" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Attributes</a>
+                        <a class="nav-link d-none" href="#">Attributes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Testing</a>
+                        <a class="nav-link d-none" href="#">Testing</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Nav Bar End -->
-    <!-- Cards Container -->
+
+    <!-- Side Bar Code Start -->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-1 col-xl-1 px-sm-2 px-0" style="background-color: rgb(236, 69, 9) !important;">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+                    <!-- Side Bar Links Start -->
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu"> 
+                        
+                        <!-- Dashboard Dropdown List -->
+                        <li>
+                            <!-- List Title -->
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline font-black">Dashboard</span>
+                            </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+
+                                <!-- First Item in List -->
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Attributes</span></a>
+                                </li>
+
+                                <!-- Second Item in List -->
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Skills</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline font-black">Stats</span>
+                            </a>
+                        </li>
+
+                        <!-- How to Test Dropdown List -->
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline font-black">How To Test</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Physical</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Cognitive</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Unassigned Dropdown List -->
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline font-black">Placeholder</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Placeholder</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Placeholder</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Placeholder</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline font-black">Placeholder</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Badges -->
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline font-black">Badges</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Side Bar Code End -->
+            <!-- Contents Start Here -->
+            <div class="col py-3 grey">
+                <div class="container text-center grey">
+                    <div class="row align-items-start grey">
+                        <div class="col-6">
+
+                            <!-- Expiremental Cards -->
+                            <article class="postcard dark blue ex-card">
+                               
+                                <div class="postcard__text">
+                                    <h1 class="postcard__title blue"><a href="#">Article Title</a></h1>
+                                    <div class="postcard__subtitle small">
+                                     
+                                    </div>
+                                    <div class="postcard__bar"></div>
+                                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>                              
+                                </div>
+                            </article>                        </div>
+                        <div class="col">
+                            One of two columns
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contents End Here -->
+        </div>
+    </div>
+    
 
 
+    <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
